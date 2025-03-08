@@ -85,9 +85,55 @@ body {
 .contenedor-quienes-somos {
   display: flex;
   align-items: center;
+  
 }
 
 .container {
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin: 20px;
+  flex: 1;
+}
+
+p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: #0a4481;
+  text-align: left;
+}
+
+h2 {
+  color: #0a4481;
+  text-align: left;
+}
+ul {
+  color: #0a4481;
+  text-align: left;
+}
+
+.imagen {
+  flex: 1;
+  text-align: right;
+}
+.imagen img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor-izquierda {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.container-izquierda {
   max-width: 800px;
   background: white;
   padding: 20px;
