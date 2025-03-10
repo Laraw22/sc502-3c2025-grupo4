@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Voluntariado</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/estilos.css" />
+    <link rel="stylesheet" href="../../css/menu.css" />
+    <link rel="stylesheet" href="../../css/perfil.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="../../views/ArchJavaSc/menuDes.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="espacio_titulo">
+        <a href="../plantilla.html" class="link log">Voluntariado</a>
+      </div>
+      <br />
+      <ul class="menu">
+        <li class="menu-item">
+          <a href="../plantilla.html" class="link menu-link">Nosotros</a>
+        </li>
+        <li class="menu-item">
+          <a href="../Noticias/noticias.html" class="link menu-link"
+            >Noticias</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="../Buscar/Buscar.html" class="link menu-link">Buscar</a>
+        </li>
+        <div class="icon-esquin">
+          <li class="menu-item">
+            <a href="inicio sesion/inicioSesion.html">
+              <i class="fa-solid fa-user"></i
+            ></a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-icon" id="menuToggle">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+          </li>
+        </div>
+      </ul>
+      <br />
+    </header>
+    <div class="side-menu" id="sideMenu">
+      <ul>
+        <li><a href="perfil/perfil.html">Perfil</a></li>
+        <li><a href="#">.....</a></li>
+        <li><a href="#">.....</a></li>
+      </ul>
+    </div>
+    <aside>
+      <br />
+    </aside>
+
+    <h2>Perfil Editable</h2>
+    <form action="#" method="POST">
+      <label for="nombre">Nombre (requerido):</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+
+      <label for="contactos">Contactos:</label>
+      <input type="text" id="contactos" name="contactos" />
+
+      <button type="submit">Guardar</button>
+      <button type="submit">Editar</button>
+    </form>
+    <footer class="foot">
+      <br />
+      <p>Maneras de contacto</p>
+      <div class="sociales" aria-hidden="true">
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.whatsapp.com/?lang=es_LA"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
+        <a href="https://www.facebook.com/?locale=es_LA"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+      </div>
+
+      <div></div>
+    </footer>
+  </body>
+</html>
