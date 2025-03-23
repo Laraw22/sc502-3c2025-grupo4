@@ -17,13 +17,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
-    <script src="../views/ArchJavaSc/menuDes.js"></script>
+    <script src="../sc502-3c2025-grupo4/public/js/menuDes.js"></script>
   </head>
 
   <body>
     <header class="header">
       <div class="espacio_titulo">
-        <a href="plantilla.html" class="link log">Voluntariado</a>
+        <a href="" class="link log">Voluntariado</a>
       </div>
       <br />
       <ul class="menu">
@@ -38,7 +38,7 @@
         </li>
         <div class="icon-esquin">
           <li class="menu-item">
-            <a href="inicio sesion/inicioSesion.html">
+            <a  href="app/partials/Es_inicioSe.php" class="menu-icon">
               <i class="fa-solid fa-user"></i
             ></a>
           </li>

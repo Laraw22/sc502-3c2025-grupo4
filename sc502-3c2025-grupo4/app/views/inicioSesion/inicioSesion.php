@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head th:fragment="head">
-    <title>Inicio de Sesión</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../../css/estilos.css" />
-    <link rel="stylesheet" href="../../css/inicioSesion.css" />
-  </head>
+
   <body>
     <div class="login-container">
       <h2>¡Le damos la bienvenida!</h2>
@@ -21,15 +13,14 @@
           <input type="password" id="password" name="password" required />
         </div>
         <div class="form-group">
-          <a href="OlvideContra.html" class="forgot-password"
+          <a href="olvideContra.php" class="forgot-password"
             >¿Olvidó su contraseña?</a
           >
         </div>
         <button type="submit">Iniciar sesión</button>
         <hr />
-        <h3>O <a href="Registro.html">Registrarse</a></h3>
-        <a href="../plantilla.html">Volver al inicio</a>
+        <h3>O <a href="Registro.php">Registrarse</a></h3>
+        <a href="../../index.php">Volver al inicio</a> <a href="../../index.php">Volver al inicio</a>
       </form>
     </div>
   </body>
-</html>

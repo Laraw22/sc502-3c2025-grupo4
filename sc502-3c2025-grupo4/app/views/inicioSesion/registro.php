@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Registro</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="estilos.css" />
-    <link
-      rel="stylesheet"
-      href="/sc502-3c2025-grupo4/resources/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/sc502-3c2025-grupo4/resources/css/Registro.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/sc502-3c2025-grupo4/resources/css/estilos.css"
-    />
-    <link rel="stylesheet" href="/sc502-3c2025-grupo4/resources/css/menu.css" />
-  </head>
+
+  
   <body>
     <div class="registro-container">
       <h2>¡Crea tu cuenta!</h2>
@@ -37,6 +19,6 @@
         </div>
         <button type="submit">Registrarse</button>
       </form>
+      <a href="Es_inicioSe.php">Volver al inicio Sesion</a>
     </div>
   </body>
-</html>

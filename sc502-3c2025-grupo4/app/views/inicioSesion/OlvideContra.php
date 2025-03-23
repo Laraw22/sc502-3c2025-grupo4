@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Recuperar Contraseña</title>
-    <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="/sc502-3c2025-grupo4/resources/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/sc502-3c2025-grupo4/resources/css/estilos.css"
-    />
-    <link
-      rel="stylesheet"
-      href="/sc502-3c2025-grupo4/resources/css/olvideContra.css"
-    />
-  </head>
+
+
   <body>
     <div class="forgot-password-container">
       <h2>Recuperar Contraseña</h2>
@@ -31,7 +15,6 @@
         </div>
         <button type="submit">Enviar</button>
       </form>
-      <a href="inicioSesion.html">Volver al Inicio de Sesión</a>
+      <a href="Es_inicioSe.php">Volver al Inicio de Sesión</a>
     </div>
   </body>
-</html>
