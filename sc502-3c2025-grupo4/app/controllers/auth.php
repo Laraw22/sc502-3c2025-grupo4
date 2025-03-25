@@ -2,26 +2,34 @@
 require_once '../models/User.php';
 
 try {
-
     if (!empty($_POST)) {
-
         $action = $_POST['action'] ?? '';
-        if ($_POST['password'] != "" && $_POST['username'] != "") {
-            if ($action === 'login') {
-                if (User::login($_POST['username'], $_POST['password'])) {
+        $correo = $_POST['email'] ?? '';
+        $password = $_POST['password'] ?? '';
+        $name = $_POST['name'] ?? ''; 
 
+        if ($correo && $password != "") {
+            if ($action === 'login') {
+                if (User::login($correo, $password)) {
                     session_start();
-                    $_SESSION["username"] = $_POST['username'];
-                    header("Location: ../../?action=3");
+                    $_SESSION['correo'] = $correo;
+                    header("Location: ../../index.php");                    
+                } else {
+                    echo "Credenciales inválidas.";
                 }
             } elseif ($action === 'register') {
-                if (User::register($_POST['username'], $_POST['password'])) {
-
-                    header("Location: ../../");
+                if (!empty($name)) { // Verificar que el nombre esté presente en el registro
+                    if (User::register($name, $correo, $password)) {                                            
+                        header("Location: ../../index.php");                        
+                    } else {
+                        echo "Ocurrió un error al registrar el usuario.";
+                    }
+                } else {
+                    echo "Por favor, complete todos los campos para el registro.";
                 }
             }
         } else {
-            echo "Datos incompletos!";
+            echo "Datos incompletos.";
         }
     }
 } catch (Exception $e) {

@@ -3,17 +3,18 @@ require_once '../../config/database.php';
 
 class User
 {
-    public static function login($username, $password)
+    public static function login($correo, $password)
     {
         global $conn;
 
         try {
-            $sql = "SELECT * FROM users where username = '$username' ";
+            // Preparar la consulta para buscar por correo
+            $sql = "SELECT * FROM usuarios WHERE correo = '$correo'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
                 $user = $result->fetch_assoc();
-                if (password_verify($password, $user['password'])) {
+                if (password_verify($password, $user['contrasena'])) {
                     return true;
                 } else {
                     return false;
@@ -26,20 +27,22 @@ class User
         }
     }
 
-
-    public static function register($username, $password)
+    public static function register($name, $correo, $password)
     {
         global $conn;
+    
+            // Encriptar la contraseña
+            $password = password_hash($password, PASSWORD_BCRYPT);
+    
+            // Preparar la consulta para insertar datos
+            $sql = "INSERT INTO usuarios (nombre, correo, contrasena) VALUES ('$name', '$correo', '$password')";
 
-        $password = password_hash($password, PASSWORD_BCRYPT);
-
-        $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-
-        if ($conn->query($sql) === TRUE) {
-            return true;
-        } else {
-            return false;
-        }
+    
+            if($conn->query($sql) === TRUE) {
+                return true;
+            } else {
+                return false;
+            }
     }
-
+    
 }
