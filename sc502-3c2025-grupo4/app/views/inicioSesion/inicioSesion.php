@@ -14,7 +14,6 @@
       </div>
       <button id="login" type="submit">Iniciar sesión</button>
       <hr />
-      <h3>O <a href="Registro.php">Registrarse</a></h3>
       <button id="redirectRegister" type="button" class="btn btn-secondary">Registrarse</button>
       <a href="../../index.php">Volver al inicio</a>
     </form>
