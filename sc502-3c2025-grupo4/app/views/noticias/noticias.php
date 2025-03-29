@@ -1,60 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noticias</title>
-  <link rel="stylesheet" href="../../css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../../css/estilos.css" />
-  <link rel="stylesheet" href="../../css/menu.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <script src="../ArchJavaSc/menuDes.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-
-<body>
-  <header class="header">
-    <div class="espacio_titulo">
-      <a href="../plantilla.html" class="link log">Voluntariado</a>
-    </div>
-    <br />
-    <ul class="menu">
-      <li class="menu-item">
-        <a href="../plantilla.html" class="link menu-link">Nosotros</a>
-      </li>
-      <li class="menu-item">
-        <a href="../Noticias/noticias.html" class="link menu-link">Noticias</a>
-      </li>
-      <li class="menu-item">
-        <a href="../Buscar/Buscar.html" class="link menu-link">Buscar</a>
-      </li>
-      <div class="icon-esquin">
-        <li class="menu-item">
-          <a href="../inicio sesion/inicioSesion.html">
-            <i class="fa-solid fa-user"></i></a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-icon" id="menuToggle">
-            <i class="fa-solid fa-bars"></i>
-          </a>
-        </li>
-      </div>
-    </ul>
-    <br />
-  </header>
-  <div class="side-menu" id="sideMenu">
-    <ul>
-      <li><a href="../perfil/perfil.html">Perfil</a></li>
-      <li><a href="#">.....</a></li>
-      <li><a href="#">.....</a></li>
-    </ul>
-  </div>
-  <aside>
-    <br />
-  </aside>
-
-  <main>
+<?php include '../../partials/head.php'; ?>
+<?php include '../../partials/navbar.php'; ?>
+<main>
     <section>
       <br />
       <div class="d-flex justify-content-between align-items-center">
@@ -63,8 +9,6 @@
             Crear noticia
         </button>
     </div>
-
-      <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -137,7 +81,9 @@
                 </button>
                 <button class="btn btn-danger" type="button">Eliminar</button>
               </div>
-              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -151,7 +97,8 @@
                       </div>
                       <div class="mb-3">
                         <label for="textoNoticia" class="form-label">Redacción</label>
-                        <textarea class="form-control" id="textoNoticia" rows="3">Lorem ipsum dolor sit amet consectetur adipiscing elit ad, tellus fermentum augue dignissim nulla placerat bibendum potenti morbi, sapien tempor torquent ligula malesuada interdum at. Phasellus ultrices facilisi magnis vulputate aptent vivamus at, nisl egestas fames quisque primis.</textarea>
+                        <textarea class="form-control" id="textoNoticia"
+                          rows="3">Lorem ipsum dolor sit amet consectetur adipiscing elit ad, tellus fermentum augue dignissim nulla placerat bibendum potenti morbi, sapien tempor torquent ligula malesuada interdum at. Phasellus ultrices facilisi magnis vulputate aptent vivamus at, nisl egestas fames quisque primis.</textarea>
                       </div>
                       <div class="mb-3">
                         <label for="formFile" class="form-label">Cambiar Imagen</label>
@@ -170,6 +117,7 @@
         </div>
       </div>
       <hr />
+
       <div class="card mb-3 w-100">
         <div class="row g-0">
           <div class="col-md-4">
@@ -215,17 +163,4 @@
       </div>
     </section>
   </main>
-
-  <footer class="foot">
-    <br />
-    <p>Maneras de contacto</p>
-    <div class="sociales" aria-hidden="true">
-      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://www.whatsapp.com/?lang=es_LA"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook"></i></a>
-    </div>
-    <div></div>
-  </footer>
-</body>
-
-</html>
+  <?php include '../../partials/footer.php'; ?>

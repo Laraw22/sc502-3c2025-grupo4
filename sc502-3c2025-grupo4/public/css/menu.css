@@ -16,12 +16,14 @@
   left: 0;
   text-align: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 body {
   font-family: sans-serif;
   padding: 80px 20px 0;
   min-height: 100vh;
+  padding-top: 100px;
 }
 
 .nav {

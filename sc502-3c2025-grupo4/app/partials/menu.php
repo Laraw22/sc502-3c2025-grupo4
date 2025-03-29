@@ -1,5 +1,3 @@
-
-
 <html>
   <head>
     <title>Voluntariado</title>
@@ -31,7 +29,7 @@
           <a href="" class="link menu-link">Nosotros</a>
         </li>
         <li class="menu-item">
-          <a href="Noticias/noticias.html" class="link menu-link">Noticias</a>
+          <a href="app/views/Noticias/noticias.php" class="link menu-link">Noticias</a>
         </li>
         <li class="menu-item">
           <a href="Buscar/Buscar.html" class="link menu-link">Buscar</a>
