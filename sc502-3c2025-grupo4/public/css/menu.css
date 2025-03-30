@@ -258,7 +258,7 @@ h2 {
   padding-top: 60px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease;
-  z-index: 1;
+  z-index: 9999;
 }
 
 .side-menu ul {

@@ -1,3 +1,4 @@
+
 <?php include '../../partials/head.php'; ?>
 <?php include '../../partials/navbar.php'; ?>
 <main>
