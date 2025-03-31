@@ -1,6 +1,4 @@
 
-<?php include '../../partials/head.php'; ?>
-<?php include '../../partials/navbar.php'; ?>
 <main>
     <section>
       <br />
@@ -164,4 +162,4 @@
       </div>
     </section>
   </main>
-  <?php include '../../partials/footer.php'; ?>
+  
