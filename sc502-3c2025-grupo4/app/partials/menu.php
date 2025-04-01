@@ -16,7 +16,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <body></body>
 <header class="header">
   <div class="espacio_titulo">
-    <a href="index.php" class="link log">Voluntariado</a>
+    <a href="../../index.php" class="link log">Voluntariado</a>
   </div>
   <br />
   <ul class="menu">

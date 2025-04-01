@@ -32,7 +32,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <?php if (isset($_SESSION['nombre'])): ?>
       <li class="menu-item usuario-nombre">
-        <a href="#">👤 <?php echo htmlspecialchars($_SESSION['nombre']); ?></a>
+        <a href="app/partials/perfil.php">👤 <?php echo htmlspecialchars($_SESSION['nombre']); ?></a>
       </li>
       <li class="menu-item">
         <a href="app/controllers/cerrarSes.php" class="menu-link">Cerrar sesión</a>
