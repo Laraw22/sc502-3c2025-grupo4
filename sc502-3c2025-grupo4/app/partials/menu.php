@@ -22,7 +22,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <ul class="menu">
     <li class="menu-item"><a href="../../index.php" class="link menu-link">Nosotros</a></li>
     <li class="menu-item"><a href="noticias.php" class="link menu-link">Noticias</a></li>
-    <li class="menu-item"><a href="Buscar/Buscar.html" class="link menu-link">Buscar</a></li>
+    <li class="menu-item"><a href="../views/Buscar/Buscar.php" class="link menu-link">Buscar</a></li>
     <li class="menu-item">
       <a href="#" class="menu-icon" id="menuToggle" style = "color: white;">
         <i class="fa-solid fa-bars" ></i></a>
