@@ -248,7 +248,7 @@ h2 {
 
 .side-menu {
   position: fixed;
-  top: 1;
+  top: 0;
   right: -250px; /* Oculto inicialmente a la derecha */
   width: 250px;
   height: 100%;
