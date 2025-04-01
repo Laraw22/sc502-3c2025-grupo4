@@ -248,13 +248,13 @@ h2 {
 
 .side-menu {
   position: fixed;
-  top: 0;
+  top: 1;
   right: -250px; /* Oculto inicialmente a la derecha */
   width: 250px;
   height: 100%;
   background-color: #274381;
   color: white;
-  padding-top: 60px;
+  padding-top: 110px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease;
   z-index: 1;
