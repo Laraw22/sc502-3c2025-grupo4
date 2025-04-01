@@ -32,7 +32,7 @@
         </p>
       </div>
       <div class="imagen">
-        <img src="resources/voluntariado una mano amiga.PNG" alt="Voluntariado" />
+        <img src="img/voluntariado una mano amiga.PNG" alt="Voluntariado" />
       </div>
     </div>
     <div class="contenedor-quienes-somos">
@@ -65,7 +65,7 @@
         </p>
       </div>
       <div class="imagen">
-        <img src="resources/social.jpeg" alt="Voluntariado" />
+        <img src="img/social.jpeg" alt="Voluntariado" />
       </div>
     </div>
     <div class="contenedor-quienes-somos">
@@ -81,7 +81,7 @@
         </p>
       </div>
       <div class="imagen">
-        <img src="resources/ANBIENTE.jpg" alt="Voluntariado" />
+        <img src="img/ANBIENTE.jpg" alt="Voluntariado" />
       </div>
     </div>
     <div class="contenedor-izquierda">
@@ -95,7 +95,7 @@
         </p>
       </div>
       <div class="imagen">
-        <img src="resources/1.png" alt="Voluntariado" />
+        <img src="img/1.png" alt="Voluntariado" />
       </div>
     </div>
     <div class="contenedor-quienes-somos">
@@ -111,6 +111,6 @@
         </p>
       </div>
       <div class="imagen">
-        <img src="resources/_Turtle_.webp" alt="Voluntariado" />
+        <img src="img/_Turtle_.webp" alt="Voluntariado" />
       </div>
     </div>
