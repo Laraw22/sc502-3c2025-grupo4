@@ -1,50 +1,47 @@
+<?php
+require_once "../controllers/VoluntariadoController.php";
+?>
 <h1>Crear Voluntariado</h1>
 <form class="row g-3">
   <div class="col-md-6">
-    <label for="inputNombre" class="form-label">Nombre del Voluntariado</label>
-    <input type="text" class="form-control" id="inputNombre" placeholder="Ejemplo: Ayuda Comunitaria">
+    <label for="inputTitulo" class="form-label">Título</label>
+    <input type="text" class="form-control" id="inputTitulo" name="titulo" placeholder="Ejemplo: Ayuda Comunitaria">
   </div>
   <div class="col-md-6">
     <label for="inputDescripcion" class="form-label">Descripción</label>
-    <textarea class="form-control" id="inputDescripcion" rows="3" placeholder="Breve descripción del voluntariado"></textarea>
+    <textarea class="form-control" id="inputDescripcion" name="descripcion" rows="3" placeholder="Breve descripción del voluntariado"></textarea>
   </div>
   <div class="col-12">
-    <label for="inputDireccion" class="form-label">Dirección</label>
-    <input type="text" class="form-control" id="inputDireccion" placeholder="Ejemplo: Calle 123, Ciudad">
+    <label for="inputUbicacion" class="form-label">Ubicación</label>
+    <input type="text" class="form-control" id="inputUbicacion" name="ubicacion" placeholder="Ejemplo: Calle 123, Ciudad">
   </div>
   <div class="col-md-6">
-    <label for="inputCiudad" class="form-label">Ciudad</label>
-    <input type="text" class="form-control" id="inputCiudad" placeholder="Ejemplo: Tibas">
+    <label for="inputFechaInicio" class="form-label">Fecha de Inicio</label>
+    <input type="date" class="form-control" id="inputFechaInicio" name="fecha_inicio">
+  </div>
+  <div class="col-md-6">
+    <label for="inputFechaFin" class="form-label">Fecha de Fin</label>
+    <input type="date" class="form-control" id="inputFechaFin" name="fecha_fin">
+  </div>
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Imagen</label>
+    <input class="form-control" type="file" id="formFile" name="imagen">
   </div>
   <div class="col-md-4">
-    <label for="inputEstado" class="form-label">Estado/Provincia</label>
-    <select id="inputEstado" class="form-select">
+    <label for="inputEstado" class="form-label">Estado</label>
+    <select id="inputEstado" class="form-select" name="estado">
       <option selected>Seleccione...</option>
-      <option>San jose</option>
-      <option>Limon</option>
-      <option>Puntarenas</option>
-      <option>Cartago</option>
-      <option>Heredia</option>
-      <option>Guanacaste</option>
-      <option>Alajuela</option> 
+      <option>Activo</option>
+      <option>Inactivo</option>
     </select>
   </div>
-  <div class="col-md-2">
-    <label for="inputCodigoPostal" class="form-label">Código Postal</label>
-    <input type="text" class="form-control" id="inputCodigoPostal" placeholder="Ejemplo: 70101">
-  </div><div class="mb-3">
-  <label for="formFile" class="form-label">Agregar imagen</label>
-  <input class="form-control" type="file" id="formFile">
-</div>
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Acepto los términos y condiciones
-      </label>
-    </div>
+  <div class="col-md-6">
+    <label for="inputFundacion" class="form-label">ID Fundación</label>
+    <input type="text" class="form-control" id="inputFundacion" name="id_fundaciones" placeholder="Ejemplo: 123">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Agregar Voluntariado</button>
   </div>
 </form>
+</div>
+</div>
