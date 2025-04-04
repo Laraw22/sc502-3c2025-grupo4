@@ -45,6 +45,11 @@ if (session_status() === PHP_SESSION_NONE) {
       <li class="menu-item usuario-nombre">
         <a href="perfil.php">👤 <?php echo htmlspecialchars($_SESSION['nombre']); ?></a>
       </li>
+      <?php if (in_array('admin', $_SESSION['roles'] ?? [])): ?>      
+        <li>
+          <a href="administracion.php" class="menu-link">Usuarios</a>
+        </li>
+      <?php endif; ?>
       <li class="menu-item">
         <a href="../controllers/cerrarSes.php" class="menu-link">Cerrar sesión</a>
       </li>
