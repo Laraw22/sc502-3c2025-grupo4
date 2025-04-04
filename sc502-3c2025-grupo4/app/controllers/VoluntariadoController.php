@@ -12,23 +12,14 @@ class VoluntariadoController
             $ubicacion = $_POST['ubicacion'] ?? '';
             $fecha_inicio = $_POST['fecha_inicio'] ?? '';
             $fecha_fin = $_POST['fecha_fin'] ?? '';
-            $estado = $_POST['estado'] ?? '';
             $id_fundaciones = $_POST['id_fundaciones'] ?? '';
             
-            // Manejo de la imagen
-            $imagen = '';
-            if (!empty($_FILES['imagen']['name'])) {
-                $target_dir = "../../uploads/";
-                $target_file = $target_dir . basename($_FILES["imagen"]["name"]);
-                if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file)) {
-                    $imagen = $target_file;
-                }
-            }
+            $imagen = $_POST['imagen'] ?? '';
             
-            $resultado = Voluntariado::crearVoluntariado($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_fundaciones);
+            $resultado = Voluntariado::crearVoluntariado($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, 1, $id_fundaciones);
             
             if ($resultado) {
-                header("Location: ../views/voluntariado.php?success=1");
+                header("Location: ../partials/CrearVolutariado.php");
                 exit();
             } else {
                 header("Location: ../views/voluntariado.php?error=1");

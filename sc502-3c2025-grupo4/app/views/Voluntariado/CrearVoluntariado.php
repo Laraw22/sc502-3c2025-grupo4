@@ -25,15 +25,7 @@ require_once "../controllers/VoluntariadoController.php";
   </div>
   <div class="mb-3">
     <label for="formFile" class="form-label">Imagen</label>
-    <input class="form-control" type="file" id="formFile" name="imagen">
-  </div>
-  <div class="col-md-4">
-    <label for="inputEstado" class="form-label">Estado</label>
-    <select id="inputEstado" class="form-select" name="estado">
-      <option selected>Seleccione...</option>
-      <option>Activo</option>
-      <option>Inactivo</option>
-    </select>
+    <input class="form-control" type="text" id="formFile" name="imagen">
   </div>
   <div class="col-md-6">
     <label for="inputFundacion" class="form-label">ID Fundación</label>
