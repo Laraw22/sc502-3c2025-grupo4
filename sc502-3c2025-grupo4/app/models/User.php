@@ -1,8 +1,23 @@
 <?php
 require_once '../../config/database.php';
 
+
 class User
 {
+    public static function getAllUsers()
+    {
+        global $conn;
+
+        $query = "SELECT id_usuario, nombre FROM usuarios";
+        $result = $conn->query($query);
+
+        $users = [];
+        while ($row = $result->fetch_assoc()) {
+            $users[] = $row;
+        }
+
+        return $users;
+    }
     // Método para el inicio de sesión
     public static function login($correo, $password)
     {
@@ -95,4 +110,6 @@ class User
             return false;
         }
     }
+
+    
 }
