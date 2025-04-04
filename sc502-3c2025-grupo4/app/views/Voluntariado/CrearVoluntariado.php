@@ -2,7 +2,7 @@
 require_once "../controllers/VoluntariadoController.php";
 ?>
 <h1>Crear Voluntariado</h1>
-<form class="row g-3">
+<form class="row g-3" method="POST" action="../controllers/VoluntariadoController.php" enctype="multipart/form-data">
   <div class="col-md-6">
     <label for="inputTitulo" class="form-label">Título</label>
     <input type="text" class="form-control" id="inputTitulo" name="titulo" placeholder="Ejemplo: Ayuda Comunitaria">
