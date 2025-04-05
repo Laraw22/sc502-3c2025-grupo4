@@ -21,9 +21,9 @@ if (session_status() === PHP_SESSION_NONE) {
   <br />
   <ul class="menu">
     <li class="menu-item"><a href="../../index.php" class="link menu-link">Nosotros</a></li>
-    <li class="menu-item"><a href="noticias.php" class="link menu-link">Noticias</a></li>
+    <li class="menu-item"><a href="../controllers/listarNoticias.php" class="link menu-link">Noticias</a></li>
     <li class="menu-item"><a href="../views/Buscar/Buscar.php" class="link menu-link">Buscar</a></li>
-    <li class="menu-item"><a href="CrearVolutariado.php" class="link menu-link">Nuevo Voluntariado</a></li>
+    <li class="menu-item"><a href="../partials/CrearVolutariado.php" class="link menu-link">Nuevo Voluntariado</a></li>
       <a href="#" class="menu-icon" id="menuToggle" style = "color: white;">
         <i class="fa-solid fa-bars" ></i></a>
     </li>
@@ -35,7 +35,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <ul>
     <?php if (!isset($_SESSION['nombre'])): ?>
       <li class="menu-item">
-        <a href="Es_inicioSe.php" class="menu-icon">
+        <a href="../partials/Es_inicioSe.php" class="menu-icon">
           <i class="fa-solid fa-user"></i> Iniciar sesión
         </a>
       </li>
@@ -47,7 +47,7 @@ if (session_status() === PHP_SESSION_NONE) {
       </li>
       <?php if (in_array('admin', $_SESSION['roles'] ?? [])): ?>      
         <li>
-          <a href="administracion.php" class="menu-link">Usuarios</a>
+          <a href="../partials/administracion.php" class="menu-link">Usuarios</a>
         </li>
       <?php endif; ?>
       <li class="menu-item">

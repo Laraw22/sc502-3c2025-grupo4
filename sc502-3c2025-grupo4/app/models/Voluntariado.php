@@ -25,7 +25,4 @@ class Voluntariado
         return true;
     }
     
-    
-
-    
 }
