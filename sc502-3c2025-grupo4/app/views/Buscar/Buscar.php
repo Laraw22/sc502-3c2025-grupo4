@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../css/estilos.css" />
-    <link rel="stylesheet" href="../../css/menu.css" />
+    <link rel="stylesheet" href="../../css/menu.css" /> 
+    <link rel="stylesheet" href="../../css/buscar.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <script>
         function searchContent() {
