@@ -12,11 +12,11 @@ class VoluntariadoController
             $ubicacion = $_POST['ubicacion'] ?? '';
             $fecha_inicio = $_POST['fecha_inicio'] ?? '';
             $fecha_fin = $_POST['fecha_fin'] ?? '';
-            $id_fundaciones = $_POST['id_fundaciones'] ?? '';
+             $id_usuario = $_POST['id_usuario'] ?? '';
             
             $imagen = $_POST['imagen'] ?? '';
             
-            $resultado = Voluntariado::crearVoluntariado($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, 1, $id_fundaciones);
+            $resultado = Voluntariado::crearVoluntariado($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, 1,  $id_usuario);
             
             if ($resultado) {
                 header("Location: ../partials/CrearVolutariado.php");

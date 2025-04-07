@@ -28,8 +28,8 @@ require_once "../controllers/VoluntariadoController.php";
     <input class="form-control" type="text" id="formFile" name="imagen">
   </div>
   <div class="col-md-6">
-    <label for="inputFundacion" class="form-label">ID Fundación</label>
-    <input type="text" class="form-control" id="inputFundacion" name="id_fundaciones" placeholder="Ejemplo: 123">
+    <label for="inputusuario" class="form-label">ID usuario</label>
+    <input type="text" class="form-control" id="inputusuario" name="id_usuario" placeholder="Ejemplo: 123">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Agregar Voluntariado</button>

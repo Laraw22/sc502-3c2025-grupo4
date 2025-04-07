@@ -3,11 +3,11 @@ require_once '../../config/database.php';
 
 class Voluntariado
 {
-    public static function crearVoluntariado($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_fundaciones)
+    public static function crearVoluntariado($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_usuario)
     {
         global $conn;
     
-        $stmt = $conn->prepare("INSERT INTO voluntariados (titulo, descripcion, ubicacion, fecha_inicio, fecha_fin, imagen, estado, id_fundaciones) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO voluntariados (titulo, descripcion, ubicacion, fecha_inicio, fecha_fin, imagen, estado, id_usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
     
         if (!$stmt) {
             // Mostrar error si falla el prepare
@@ -15,7 +15,7 @@ class Voluntariado
         }
     
         // Asegura que el bind sea correcto: s = string, i = int
-        $stmt->bind_param("ssssssii", $titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_fundaciones);
+        $stmt->bind_param("ssssssii", $titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado,  $id_usuario);
     
         if (!$stmt->execute()) {
             // Mostrar error si falla el execute
