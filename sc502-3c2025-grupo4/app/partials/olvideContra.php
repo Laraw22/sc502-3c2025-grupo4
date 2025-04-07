@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="../../public/css/olvideContra.css"
     />
+    <script src="../../public/js/contraNueva.js" defer></script>
   </head>
 
   <?php include '../views/inicioSesion/OlvideContra.php'; ?>
