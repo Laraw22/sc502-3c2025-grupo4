@@ -22,11 +22,14 @@ if (session_status() === PHP_SESSION_NONE) {
   <ul class="menu">
     <li class="menu-item"><a href="../../index.php" class="link menu-link">Nosotros</a></li>
     <li class="menu-item"><a href="../controllers/listarNoticias.php" class="link menu-link">Noticias</a></li>
-    <li class="menu-item"><a href="../views/Buscar/Buscar.php" class="link menu-link">Buscar</a></li>
+    <li class="menu-item"><a href="../views/Buscar/Buscar.php" class="link menu-link">Buscar</a></li>    
+    <?php 
+if (isset($_SESSION['roles']) && (in_array('admin', $_SESSION['roles']) || in_array('fundacion', $_SESSION['roles']))): ?>      
     <li class="menu-item"><a href="../partials/CrearVolutariado.php" class="link menu-link">Nuevo Voluntariado</a></li>
-      <a href="#" class="menu-icon" id="menuToggle" style = "color: white;">
+<?php endif; ?>  
+    
+    <a href="#" class="menu-icon" id="menuToggle" style = "color: white;">
         <i class="fa-solid fa-bars" ></i></a>
-    </li>
   </ul>
   <br />
 </header>

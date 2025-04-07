@@ -2,7 +2,7 @@
   <section class="container mt-4" style= "max-width: 98%;">
     <div class="d-flex justify-content-between align-items-center">
       <h1 class="mb-0">Últimas Noticias</h1>
-      <?php if (isset($_SESSION['roles']) && is_array($_SESSION['roles']) && in_array('admin', $_SESSION['roles'])): ?>
+      <?php if (isset($_SESSION['roles']) && (in_array('admin', $_SESSION['roles']) || in_array('fundacion', $_SESSION['roles']))): ?>      
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCrear">
         Crear noticia
       </button>
