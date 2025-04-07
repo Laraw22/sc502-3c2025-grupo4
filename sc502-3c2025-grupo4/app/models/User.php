@@ -111,5 +111,24 @@ class User
         }
     }
 
-    
+    public static function getUserByNameAndEmail($name, $email)
+{
+    global $conn;
+
+    try {
+        $stmt = $conn->prepare("SELECT id_usuario FROM usuarios WHERE nombre = ? AND correo = ?");
+        $stmt->bind_param("ss", $name, $email);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        if ($resultado->num_rows === 1) {
+            return $resultado->fetch_assoc();
+        }
+
+        return false;
+    } catch (mysqli_sql_exception $e) {
+        return false;
+    }
+}
+
 }
