@@ -22,6 +22,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <ul class="menu">
     <li class="menu-item"><a href="../../index.php" class="link menu-link">Nosotros</a></li>
     <li class="menu-item"><a href="../controllers/listarNoticias.php" class="link menu-link">Noticias</a></li>
+    <li class="menu-item"><a href="../controllers/listarVoluntariado.php" class="link menu-link">Voluntariados</a></li>
     <li class="menu-item"><a href="../views/Buscar/Buscar.php" class="link menu-link">Buscar</a></li>    
     <?php 
 if (isset($_SESSION['roles']) && (in_array('admin', $_SESSION['roles']) || in_array('fundacion', $_SESSION['roles']))): ?>      

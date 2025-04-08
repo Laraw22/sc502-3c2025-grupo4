@@ -1,28 +1,51 @@
 <?php
-require_once '../../config/database.php';
+require_once __DIR__ . '/../../config/database.php';
 
-class Voluntariado
-{
-    public static function crearVoluntariado($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_usuario)
-    {
+class Voluntariado {
+
+    public function crear($titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_usuario) {
         global $conn;
-    
-        $stmt = $conn->prepare("INSERT INTO voluntariados (titulo, descripcion, ubicacion, fecha_inicio, fecha_fin, imagen, estado, id_usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    
-        if (!$stmt) {
-            // Mostrar error si falla el prepare
-            die("Error al preparar la consulta: " . $conn->error);
-        }
-    
-        // Asegura que el bind sea correcto: s = string, i = int
-        $stmt->bind_param("ssssssii", $titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado,  $id_usuario);
-    
-        if (!$stmt->execute()) {
-            // Mostrar error si falla el execute
-            die("Error al ejecutar la consulta: " . $stmt->error);
-        }
-    
-        return true;
+
+        $stmt = $conn->prepare("INSERT INTO voluntariados (titulo, descripcion, ubicacion, fecha_inicio, fecha_fin, imagen, estado, id_usuario) 
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssssii", $titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_usuario);
+        return $stmt->execute();
     }
-    
+
+    public function obtenerTodos() {
+        global $conn;
+
+        $resultado = $conn->query("SELECT v.*, u.nombre AS nombre_usuario 
+                                   FROM voluntariados v 
+                                   JOIN usuarios u ON v.id_usuario = u.id_usuario 
+                                   ORDER BY fecha_inicio DESC");
+        return $resultado->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function obtenerPorId($id) {
+        global $conn;
+
+        $stmt = $conn->prepare("SELECT * FROM voluntariados WHERE id_voluntariado = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        return $stmt->get_result()->fetch_assoc();
+    }
+
+    public function actualizar($id, $titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_usuario) {
+        global $conn;
+
+        $stmt = $conn->prepare("UPDATE voluntariados 
+                                SET titulo = ?, descripcion = ?, ubicacion = ?, fecha_inicio = ?, fecha_fin = ?, imagen = ?, estado = ?, id_usuario = ? 
+                                WHERE id_voluntariado = ?");
+        $stmt->bind_param("ssssssiii", $titulo, $descripcion, $ubicacion, $fecha_inicio, $fecha_fin, $imagen, $estado, $id_usuario, $id);
+        return $stmt->execute();
+    }
+
+    public function eliminar($id) {
+        global $conn;
+
+        $stmt = $conn->prepare("DELETE FROM voluntariados WHERE id_voluntariado = ?");
+        $stmt->bind_param("i", $id);
+        return $stmt->execute();
+    }
 }
