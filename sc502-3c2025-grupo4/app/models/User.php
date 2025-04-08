@@ -131,4 +131,42 @@ class User
     }
 }
 
+public static function getUserById($id_usuario)
+{
+    global $conn;
+
+    try {
+        $stmt = $conn->prepare("SELECT id_usuario, nombre, descripcion, contacto FROM usuarios WHERE id_usuario = ?");
+        $stmt->bind_param("i", $id_usuario);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        if ($resultado->num_rows === 1) {
+            return $resultado->fetch_assoc();
+        }
+
+        return false;
+
+    } catch (mysqli_sql_exception $e) {
+        return false;
+    }
+}
+
+public static function updateUserProfile($id_usuario, $nombre, $descripcion, $contactos)
+{
+    global $conn;
+
+    try {
+        $stmt = $conn->prepare("
+            UPDATE usuarios 
+            SET nombre = ?, descripcion = ?, contacto = ? 
+            WHERE id_usuario = ?
+        ");
+        $stmt->bind_param("sssi", $nombre, $descripcion, $contactos, $id_usuario);
+        return $stmt->execute();
+    } catch (mysqli_sql_exception $e) {
+        return false;
+    }
+}
+
 }
