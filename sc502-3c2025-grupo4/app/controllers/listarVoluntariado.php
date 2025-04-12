@@ -7,3 +7,5 @@ $voluntariados = $voluntariado->obtenerTodos();
 
 // Cargamos la vista con los datos
 require_once __DIR__ . '/../partials/CrearVolutariado.php';
+require_once __DIR__ . '/../partials/buscar.php';
+

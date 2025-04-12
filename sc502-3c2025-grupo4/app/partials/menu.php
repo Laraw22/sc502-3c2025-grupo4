@@ -11,6 +11,8 @@ if (session_status() === PHP_SESSION_NONE) {
   <link rel="stylesheet" href="../../public/css/estilos.css">
   <link rel="stylesheet" href="../../public/css/menu.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../../public/css/buscar.css" />
+
   <script src="../../public/js/menuDes.js"></script>
 </head>
 <body></body>
@@ -23,7 +25,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <li class="menu-item"><a href="../../index.php" class="link menu-link">Nosotros</a></li>
     <li class="menu-item"><a href="../controllers/listarNoticias.php" class="link menu-link">Noticias</a></li>
     <li class="menu-item"><a href="../controllers/listarVoluntariado.php" class="link menu-link">Voluntariados</a></li>
-    <li class="menu-item"><a href="../views/Buscar/Buscar.php" class="link menu-link">Buscar</a></li>    
+    <li class="menu-item"><a href="buscar.php" class="link menu-link">Buscar</a></li>    
     <?php 
 if (isset($_SESSION['roles']) && (in_array('admin', $_SESSION['roles']) || in_array('fundacion', $_SESSION['roles']))): ?>      
     <li class="menu-item"><a href="../partials/CrearVolutariado.php" class="link menu-link">Nuevo Voluntariado</a></li>

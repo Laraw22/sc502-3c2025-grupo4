@@ -11,7 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
   <ul class="menu">
     <li class="menu-item"><a href="index.php" class="link menu-link">Nosotros</a></li>
     <li class="menu-item"><a href="app/partials/noticias.php" class="link menu-link">Noticias</a></li>
-    <li class="menu-item"><a href="app/views/Buscar/Buscar.php" class="link menu-link">Buscar</a></li>
+    <li class="menu-item"><a href="app/partials/Buscar.php" class="link menu-link">Buscar</a></li>
     <?php if (in_array('admin', $_SESSION['roles'] ?? [])): ?> 4
       <li class="menu-item"><a href="app/partials/CrearVolutariado.php" class="link menu-link">Nuevo Voluntariado</a></li> 
       <?php endif; ?>
