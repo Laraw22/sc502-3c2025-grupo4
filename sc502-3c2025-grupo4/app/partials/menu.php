@@ -31,7 +31,7 @@ if (isset($_SESSION['roles']) && (in_array('admin', $_SESSION['roles']) || in_ar
     <li class="menu-item"><a href="../partials/CrearVolutariado.php" class="link menu-link">Nuevo Voluntariado</a></li>
 <?php endif; ?>  
     
-    <a href="#" class="menu-icon" id="menuToggle" style = "color: white;">
+    <a href="" class="menu-icon" id="menuToggle" style = "color: white;">
         <i class="fa-solid fa-bars" ></i></a>
   </ul>
   <br />
