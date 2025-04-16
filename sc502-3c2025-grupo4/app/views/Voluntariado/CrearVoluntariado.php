@@ -25,6 +25,10 @@
                   <label class="form-label">Título</label>
                   <input type="text" class="form-control" name="titulo" placeholder="Ejemplo: Ayuda Comunitaria" required>
                 </div>
+                <div class="col-md-6">
+                  <label class="form-label">ID Usuario</label>
+                  <input type="text" class="form-control" name="id_usuario" placeholder="Ejemplo: 123" required>
+                </div>
                 <div class="col-md-12">
                   <label class="form-label">Descripción</label>
                   <textarea class="form-control" name="descripcion" rows="3" placeholder="Breve descripción del voluntariado" required></textarea>
@@ -105,6 +109,10 @@
                             <div class="col-md-6">
                               <label class="form-label">Título</label>
                               <input type="text" class="form-control" name="titulo" value="<?= htmlspecialchars($v['titulo']) ?>" required>
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label">ID Usuario</label>
+                              <input type="text" class="form-control" name="id_usuario" value="<?= htmlspecialchars($v['id_usuario']) ?>" required>
                             </div>
                             <div class="col-md-12">
                               <label class="form-label">Descripción</label>

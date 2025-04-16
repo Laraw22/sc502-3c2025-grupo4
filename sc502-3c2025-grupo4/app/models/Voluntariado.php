@@ -14,13 +14,30 @@ class Voluntariado {
 
     public function obtenerTodos() {
         global $conn;
-
-        $resultado = $conn->query("SELECT v.*, u.nombre AS nombre_usuario 
-                                   FROM voluntariados v 
-                                   JOIN usuarios u ON v.id_usuario = u.id_usuario 
-                                   ORDER BY fecha_inicio DESC");
+    
+        if (!isset($conn)) {
+            die("🛑 Error: \$conn no está definida.");
+        }
+    
+        if (!$conn) {
+            die("🛑 Error: Conexión no válida.");
+        }
+    
+        $query = "SELECT v.*, u.nombre AS nombre_usuario 
+                  FROM voluntariados v 
+                  JOIN usuarios u ON v.id_usuario = u.id_usuario 
+                  ORDER BY fecha_inicio DESC";
+    
+        $resultado = $conn->query($query);
+    
+        if (!$resultado) {
+            die("🛑 Error en la consulta SQL: " . $conn->error);
+        }
+    
         return $resultado->fetch_all(MYSQLI_ASSOC);
     }
+    
+    
 
     public function obtenerPorId($id) {
         global $conn;
