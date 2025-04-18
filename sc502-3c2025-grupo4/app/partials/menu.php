@@ -29,10 +29,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <li class="menu-item"><a href="../controllers/listarNoticias.php" class="link menu-link">Noticias</a></li>
     <li class="menu-item"><a href="../controllers/listarVoluntariado.php" class="link menu-link">Voluntariados</a></li>
     <li class="menu-item"><a href="../controllers/buscarController.php" class="link menu-link">Buscar</a></li>    
-    <?php 
-if (isset($_SESSION['roles']) && (in_array('admin', $_SESSION['roles']) || in_array('fundacion', $_SESSION['roles']))): ?>      
-    <li class="menu-item"><a href="../partials/CrearVolutariado.php" class="link menu-link">Nuevo Voluntariado</a></li>
-<?php endif; ?>  
+  
     
     <a href="#" class="menu-icon" id="menuToggle" style = "color: white;">
         <i class="fa-solid fa-bars" ></i></a>

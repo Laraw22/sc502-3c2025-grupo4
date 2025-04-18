@@ -65,4 +65,15 @@ class Voluntariado {
         $stmt->bind_param("i", $id);
         return $stmt->execute();
     }
+    public function obtenerIdUsuarioCreador($idVoluntariado) {
+        global $conn;
+    
+        $stmt = $conn->prepare("SELECT id_usuario FROM voluntariados WHERE id_voluntariado = ?");
+        $stmt->bind_param("i", $idVoluntariado);
+        $stmt->execute();
+        
+        $resultado = $stmt->get_result()->fetch_assoc();
+        
+        return $resultado ? $resultado['id_usuario'] : null;
+    }
 }

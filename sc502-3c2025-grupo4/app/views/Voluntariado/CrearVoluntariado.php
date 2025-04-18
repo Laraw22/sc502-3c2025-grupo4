@@ -77,7 +77,7 @@
                   Desde: <?= date("d/m/Y", strtotime($v['fecha_inicio'])) ?> | Hasta: <?= date("d/m/Y", strtotime($v['fecha_fin'])) ?>
                 </small></p>
 
-                <?php if (isset($_SESSION['roles']) && in_array('admin', $_SESSION['roles'])): ?>
+                <?php if (isset($_SESSION['roles']) && ( in_array('admin', $_SESSION['roles']) || (in_array('fundacion', $_SESSION['roles']) && $_SESSION['id_usuario'] === $v['id_usuario_creador']))): ?>
                   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <!-- Botón editar -->
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar<?= $v['id_voluntariado'] ?>">
