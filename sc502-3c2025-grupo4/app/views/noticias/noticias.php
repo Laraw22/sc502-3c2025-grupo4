@@ -55,9 +55,11 @@
             <h5 class="card-title"><b><?= htmlspecialchars($n['titulo']) ?></b></h5>
             <p class="card-text"><?= nl2br(htmlspecialchars($n['contenido'])) ?></p>
             <p class="card-text"><small class="text-muted">Publicado el: <?= date("d/m/Y", strtotime($n['fecha_publicacion']))?> por <?= htmlspecialchars($n['nombre_autor']) ?></small></p>
-
             </small></p>
-            <?php if (isset($_SESSION['roles']) && is_array($_SESSION['roles']) && in_array('admin', $_SESSION['roles'])): ?>
+
+            <?php if (isset($_SESSION['roles']) && ( in_array('admin', $_SESSION['roles']) || (in_array('fundacion', $_SESSION['roles']) && isset($n['id_usuario_creador']) && $_SESSION['id_usuario'] == $n['id_usuario_creador']))): ?>
+
+
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
               <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar<?= $n['id_noticia'] ?>">
                 Editar

@@ -45,5 +45,16 @@ class Noticia {
         $stmt->bind_param("i", $id);
         return $stmt->execute();
     }
+    public function obtenerIdUsuarioCreador($idNoticia) {
+        global $conn;
+    
+        $stmt = $conn->prepare("SELECT autor FROM noticias WHERE id_noticia = ?");
+        $stmt->bind_param("i", $idNoticia);
+        $stmt->execute();
+        
+        $resultado = $stmt->get_result()->fetch_assoc();
+        
+        return $resultado ? $resultado['autor'] : null;
+    }
 }
 
